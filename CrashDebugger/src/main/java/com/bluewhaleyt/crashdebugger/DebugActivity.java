@@ -37,13 +37,13 @@ public class DebugActivity extends AppCompatActivity {
         var strBuilderMessage = new StringBuilder();
         strBuilderMessage.append(getResources().getString(R.string.manufacturer) + ": " + DeviceUtils.getManufacturer() + "\n");
         strBuilderMessage.append(getResources().getString(R.string.device) + ": " + DeviceUtils.getModel() + "\n");
-        strBuilderMessage.append(getIntent().getStringExtra("Software"));
+        strBuilderMessage.append(getIntent().getStringExtra("software"));
         strBuilderMessage.append(getResources().getString(R.string.app_version) + ": " + getAppVersion() + "\n");
         strBuilderMessage.append(getResources().getString(R.string.crash_time) + ": ");
-        strBuilderMessage.append(getIntent().getStringExtra("Date"));
+        strBuilderMessage.append(getIntent().getStringExtra("date"));
         strBuilderMessage.append("\n");
         strBuilderMessage.append(getResources().getString(R.string.crash_message) + ": " + "\n");
-        strBuilderMessage.append(getIntent().getStringExtra("Error"));
+        strBuilderMessage.append(getIntent().getStringExtra("error"));
 
         binding.tvResult.setText(strBuilderMessage.toString());
 

@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // add this code
-        Thread.setDefaultUncaughtExceptionHandler(new CrashHandler(this));
+        CrashDebugger.init(this);
         setContentView(R.layout.activity_main);
         ...
     }

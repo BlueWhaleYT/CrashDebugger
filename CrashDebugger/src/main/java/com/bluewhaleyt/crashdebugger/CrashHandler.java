@@ -45,14 +45,14 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler{
         strBuilderDateInfo.append(Calendar.getInstance().getTime());
         strBuilderDateInfo.append(lineBreak);
 
-        Log.d("Error", strBuilderMessage.toString());
-        Log.d("Software", strBuilderSoftwareInfo.toString());
-        Log.d("Date", strBuilderDateInfo.toString());
+        Log.d("error", strBuilderMessage.toString());
+        Log.d("software", strBuilderSoftwareInfo.toString());
+        Log.d("date", strBuilderDateInfo.toString());
 
         var intent = new Intent(context, DebugActivity.class);
-        intent.putExtra("Error", strBuilderMessage.toString());
-        intent.putExtra("Software", strBuilderSoftwareInfo.toString());
-        intent.putExtra("Date", strBuilderDateInfo.toString());
+        intent.putExtra("error", strBuilderMessage.toString());
+        intent.putExtra("software", strBuilderSoftwareInfo.toString());
+        intent.putExtra("date", strBuilderDateInfo.toString());
 
         context.startActivity(intent);
 
